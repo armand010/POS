@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::prefix('category')->group(function(){
     Route::get('/{product}', [ProductController::class, 'product']);
 });
+
+Route::get('/user/{id}/name/{name}', [UserController::class, 'user']);
