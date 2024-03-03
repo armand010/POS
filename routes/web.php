@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SalesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,5 @@ Route::prefix('category')->group(function(){
 });
 
 Route::get('/user/{id}/name/{name}', [UserController::class, 'user']);
+
+Route::get('/sales', [SalesController::class, 'sales']);
